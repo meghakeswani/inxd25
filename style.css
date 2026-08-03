@@ -141,6 +141,15 @@ h1 {
   box-shadow: 1px 1px 0 var(--bg);
 }
 
+.svg-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.svg-link:hover {
+  opacity: 0.9;
+}
+
 @media (max-width: 700px) {
   .grid {
     grid-template-columns: 1fr;
