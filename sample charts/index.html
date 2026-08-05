@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Camera Release Date vs Max Resolution</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="author" content="Megha Keswani">
+  <meta name="description" content="Scatterplot comparing camera release date and max resolution.">
+
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <h1>Camera release date vs max resolution</h1>
+    <p class="intro">A scatterplot comparison built in four different visualization styles.</p>
+
+    <div class="grid">
+      <section class="chart-card">
+        <h3>Template // Chart.js</h3>
+        <canvas id="chartjs-chart"></canvas>
+      </section>
+
+      <section class="chart-card">
+        <h3>Grammar // Plotly</h3>
+        <div id="plotly-chart"></div>
+      </section>
+
+      <section class="chart-card">
+        <h3>Component // D3.js</h3>
+        <svg id="d3-chart"></svg>
+      </section>
+
+      <section class="chart-card">
+        <h3>Sketch // p5.js</h3>
+        <div id="p5-chart"></div>
+      </section>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

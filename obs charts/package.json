@@ -1,0 +1,14 @@
+{
+  "name": "ccca27ffbc94515c",
+  "main": "ccca27ffbc94515c@89.js",
+  "version": "89.0.0",
+  "homepage": "https://observablehq.com/d/ccca27ffbc94515c",
+  "author": {
+    "name": "NID",
+    "url": "https://observablehq.com/@nid15"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
