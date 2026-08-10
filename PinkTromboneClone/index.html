@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pink Trombone Clone</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <section class="visual-panel">
+        <canvas id="tractCanvas"></canvas>
+        <canvas id="analysisCanvas"></canvas>
+        <div class="hud">
+          <div class="pill" id="pitchReadout">Pitch: -- Hz</div>
+          <div class="pill" id="formantReadout">Formants: -- / -- / --</div>
+        </div>
+      </section>
+
+      <aside class="control-panel">
+        <div class="panel-header">
+          <h1>Pink Trombone Clone</h1>
+          <p>Interactive vocal tract simulation with live synthesis.</p>
+        </div>
+
+        <div class="control-list">
+          <label class="control-row">
+            <span>Pitch</span>
+            <input id="pitch" name="pitch" type="range" min="70" max="260" value="140" />
+            <output id="pitchValue">140</output>
+          </label>
+
+          <label class="control-row">
+            <span>Voice</span>
+            <input id="voice" name="voice" type="range" min="0" max="1" step="0.01" value="0.82" />
+            <output id="voiceValue">0.82</output>
+          </label>
+
+          <label class="control-row">
+            <span>Tenseness</span>
+            <input id="tenseness" name="tenseness" type="range" min="0" max="1" step="0.01" value="0.45" />
+            <output id="tensenessValue">0.45</output>
+          </label>
+
+          <label class="control-row">
+            <span>Breathiness</span>
+            <input id="breathiness" name="breathiness" type="range" min="0" max="1" step="0.01" value="0.24" />
+            <output id="breathinessValue">0.24</output>
+          </label>
+
+          <label class="control-row">
+            <span>Volume</span>
+            <input id="volume" name="volume" type="range" min="0" max="1" step="0.01" value="0.55" />
+            <output id="volumeValue">0.55</output>
+          </label>
+
+          <label class="control-row">
+            <span>Vibrato</span>
+            <input id="vibrato" name="vibrato" type="range" min="0" max="1" step="0.01" value="0.16" />
+            <output id="vibratoValue">0.16</output>
+          </label>
+
+          <label class="control-row">
+            <span>Noise</span>
+            <input id="noise" name="noise" type="range" min="0" max="1" step="0.01" value="0.14" />
+            <output id="noiseValue">0.14</output>
+          </label>
+
+          <label class="control-row">
+            <span>Tongue stiffness</span>
+            <input id="tongueStiffness" name="tongueStiffness" type="range" min="0" max="1" step="0.01" value="0.2" />
+            <output id="tongueStiffnessValue">0.20</output>
+          </label>
+
+          <label class="control-row">
+            <span>Tract length</span>
+            <input id="tractLength" name="tractLength" type="range" min="0" max="1" step="0.01" value="0.68" />
+            <output id="tractLengthValue">0.68</output>
+          </label>
+
+          <label class="control-row">
+            <span>Resonance</span>
+            <input id="resonance" name="resonance" type="range" min="0" max="1" step="0.01" value="0.62" />
+            <output id="resonanceValue">0.62</output>
+          </label>
+        </div>
+
+        <div class="button-row">
+          <button class="preset-button" data-preset="ah">Ah</button>
+          <button class="preset-button" data-preset="ee">Ee</button>
+          <button class="preset-button" data-preset="oo">Oo</button>
+          <button class="preset-button" data-preset="ss">Ss</button>
+        </div>
+
+        <div class="tips">
+          <p>Click or tap to speak. Drag the tongue. Space toggles the voice. Double-click resets the tract.</p>
+        </div>
+      </aside>
+    </div>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
